@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+        .carouselExampleCaptions {
+            width: 100%;
+            height: auto;
+        }
+
+        .display-6 {
+            width: 150px;
+            padding: 0%;
+        }
+
+        .navbar-brand {
+            margin-right: auto;
+        }
+
+        :root {
+            --bg-color: #15151e;
+            --text-color: #ffffff;
+            --muted-text: #949498;
+            --accent-red: #e10600;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+        }
+
+        .f1-footer {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 4px solid var(--accent-red);
+        }
+
+        .footer-container {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--muted-text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--text-color);
+        }
+
+        /* App Download Links */
+        .app-downloads {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .app-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #000000;
+            border: 1px solid #38383f;
+            border-radius: 4px;
+            padding: 8px 12px;
+            color: white;
+            text-decoration: none;
+            width: 140px;
+        }
+
+        .app-btn i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .app-btn .btn-text {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--muted-text);
+            line-height: 1.2;
+        }
+
+        .app-btn .btn-text span {
+            display: block;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+            text-transform: none;
+        }
+
+        /* Bottom Row */
+        .footer-bottom {
+            width: 100%;
+            max-width: 1200px;
+            border-top: 1px solid #25252e;
+            padding-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Placeholder official supplier logo badge */
+        .supplier-badge {
+            border: 1px solid #38383f;
+            padding: 5px 10px;
+            font-size: 10px;
+            color: var(--muted-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .supplier-badge span {
+            display: block;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: var(--muted-text);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--muted-text);
+            font-size: 18px;
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--text-color);
+        }
+
+        .contact-phone {
+            color: var(--muted-text);
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-phone:hover {
+            color: var(--text-color);
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html">
+                <img src="Logo-removebg.png" alt="Network Error" class="display-6" id="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-2.html" target="_blank">Maps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-3.html">Tickets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-disabled="true" href="contact.html">Support</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="sakovia" style="padding: 15px 25px;">
+        <div class="top" style="    font-size: 30px; font-weight: 700; padding: 15px 6px; color: black;">
+            <p style="font-family: Roboto Condensed, sans-serif; font-optical-sizing: auto; font-style: normal;"><u>F1
+                    Circuit Map</u>:</p>
+        </div>
+
+        <div class="card mb-3" style="max-width: 100%; font-family: sans-serif; box-shadow: 0px 8px 35px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="Belgium-F1 circuit map.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">The Circuit de Spa-Francorchamps </h5>
+                        <p class="card-text">This is about 7.004 km (4.352 mi), 19-corner grand prix track located in
+                            the ardennes region of Wallonia, Belgium. Key Map (longest track on the current F1
+                            calendar).Number
+                            of Corners: 19 turns.Elevation Change: 102.2 meters between its lowest and highest
+                            points.Race Laps: 44 laps totaling 308.052 km. Length and Turns: The 19-turn track features
+                            massive elevation changes spanning a 102.2-meter difference between its highest and lowest
+                            points. La Source: The opening tight right-hand hairpin turn located right after the
+                            start/finish line. Eau Rouge and Raidillon: The legendary downhill sweep followed by a
+                            steep, blind uphill left-right-left kink where drivers experience intense compression
+                            forces. Kemmel Straight: A long, uphill straightaway following Eau Rouge that serves as the
+                            track's primary overtaking and DRS (Drag Reduction System) zone leading into Les Combes.
+                            Pouhon: A fast, treacherous double-left corner complex that tests high-speed aerodynamic
+                            grip.Blanchimont and Chicane: A blistering high-speed left kink taken nearly flat-out,
+                            leading down to the final hard-braking chicane before the main straight.</p>
+                        <p class="card-text">
+                        <div class="card-footer">
+                            <a href="https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps">Wikipedia</a>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="margin-bottom: 15px;">
+            <div class="card-header" style="font-size: 20px; font-weight: 600;">Key Circuit Map & Layout Details</div>
+            <div class="card-body">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>Formula One (F1) officially began in 1950 as the premier global championship for
+                            single-seater
+                            open-wheel racing cars governed by the.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer"><strong>Length:</strong> 7.004 kilometers (longest track on
+                        the current F1 calendar).</figcaption>
+                    <figcaption class="blockquote-footer"><strong>Number of Corners:</strong> 19 turns.</figcaption>
+                    <figcaption class="blockquote-footer">Italian driver Giuseppe "Nino" Farina won the inaugural title
+                        driving
+                        for Alfa Romeo.</figcaption>
+                    <figcaption class="blockquote-footer"><strong>Elevation Change:</strong> 102.2 meters between its
+                        lowest and highest points.</figcaption>
+                    <figcaption class="blockquote-footer"><strong>Elevation Change:</strong> 102.2 meters between its
+                        lowest and highest points.</figcaption>
+                    <figcaption class="blockquote-footer"><strong>Race Laps:</strong> 44 laps totaling 308.052 km.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 15px;">
+            <div class="card-header" style="font-size: 20px; font-weight: 600;">Iconic Sections</div>
+            <div class="card-body">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>Formula One (F1) officially began in 1950 as the premier global championship for
+                            single-seater
+                            open-wheel racing cars governed by the.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer"><strong>La Source (Turn 1):</strong> A tight, heavy-braking
+                        hairpin right at the start-finish straight.</figcaption>
+                    <figcaption class="blockquote-footer"><strong>Eau Rouge & Raidillon (Turns 2-4):</strong> A famous,
+                        gravity-defying dip and blind uphill climb with a 17-percent gradient and 40-meter elevation
+                        change.</figcaption>
+                    <figcaption class="blockquote-footer"><strong>Kemmel Straight:</strong> A massive high-speed
+                        flat-out run following Raidillon leading to the primary overtaking zone.</figcaption>
+                    <figcaption class="blockquote-footer"><strong>Pouhon (Turns 10-11):</strong> A dizzying, high-speed
+                        double-left-hander taken at extreme throttle commitment.</figcaption>
+                    <figcaption class="blockquote-footer">Les Combes (Turns 5-7):</strong> A sharp uphill chicane
+                        sequence and major heavy-braking overtaking spot.</figcaption>
+                    <figcaption class="blockquote-footer">Blanchimont (Turn 17):</strong> A terrifying high-speed
+                        sweeping left-hand bend taken near 300 km/h.</figcaption>
+                    <figcaption class="blockquote-footer">Bus Stop Chicane (Turns 18-19):</strong> A tight final
+                        slow-speed S-sequence before the main straight.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="apart">
+            <p
+                style="font-weight: 700; font-family: monospace; color: rgb(88, 96, 123); font-size: 20px; text-decoration: dashed; cursor: pointer;">
+                <u>There are 23 circuit maps used for the 2026 F1 season, as each of the 23 scheduled Grand Prix races takes place on a unique track layout</u>.
+            </p>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: grey; color: white;">
+                        Total Rounds
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body" style="background-color: grey; color: white;">23 separate race tracks
+                        (or
+                        circuit maps) feature on the calendar.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                        style="background-color: grey; color: white;">
+                        Types of Layouts
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body" style="background-color: grey; color: white;">The maps include permanent
+                        racing facilities, temporary street circuits, and traditional road courses.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
+                        style="background-color: grey; color: white;">
+                        Historical Scale
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body" style="background-color: grey; color: white;">Over the history of
+                        Formula 1,
+                        teams have raced on 77 different official circuits worldwide.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="f1-footer">
+        <div class="footer-container">
+            <!-- Column 1 -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">F1 Tickets</a></li>
+                    <li><a href="#">F1 Hospitality</a></li>
+                    <li><a href="#">F1 Experiences</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a class="contact-phone" href="tel:+17186827493"><i class="fa-solid fa-phone"></i> +1
+                            718-682-7493</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 (Apps) -->
+            <div class="footer-column">
+                <h3 style="color: var(--muted-text); font-size: 11px;">Download the Official F1 App</h3>
+                <div class="app-downloads">
+                    <a href="#" class="app-btn">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div class="btn-text">Get it on <span>Google Play</span></div>
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fa-brands fa-apple"></i>
+                        <div class="btn-text">Download on the <span>App Store</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="logo-section">
+                <!-- SVG alternative to the F1 logo seen in the bottom image -->
+                <svg width="60" height="15" viewBox="0 0 120 30" fill="var(--accent-red)">
+                    <path
+                        d="M0 30h14.2l3.4-11.4h17.5L31.7 30h14.2l6.8-22.8H18.4L15 18.6H5.7L9 7.2H0z M60 7.2h35.4v5.7H71.1v4.3h20.6v5.7H71.1V30H60z M105.4 7.2h14.6v22.8h-14.6z" />
+                </svg>
+                <div class="supplier-badge">
+                    Official Supplier
+                    <span>Platinium Group</span>
+                </div>
+            </div>
+
+            <div class="copyright">
+                Copyright © Formula One World Championship Limited 2026 - All Rights Reserved
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
