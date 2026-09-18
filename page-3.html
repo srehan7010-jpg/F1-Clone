@@ -207,6 +207,38 @@
         .col:hover {
             transform: scale(1.09);
         }
+
+        @media(max-width:425px) {
+            .row {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media(max-width:375px) {
+            .row {
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+            
+            .col {
+                height: 245px !important;
+            }
+        }
+
+        @media(max-width:320px) {
+            .row {
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+
+            .col {
+                height: 245px !important;
+            }
+        }
+
+        @media(max-width:1440px) {
+            .col {
+                height: 240px !important;
+            }
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -229,7 +261,7 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-2.html" target="_blank">Maps</a>
+                        <a class="nav-link" href="page-2.html">Maps</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="page-3.html">Tickets</a>
@@ -248,7 +280,8 @@
 
     <div class="sakovia" style="padding: 15px 25px;">
         <div class="ticket" style="margin-bottom: 20px;">
-            <h4 style="color: red; font-family: monospace;">Book My View<span class="badge text-bg-secondary" style="margin-left: 15px;">New Season 2026</span></h4>
+            <h4 style="color: red; font-family: monospace;">Book My View<span class="badge text-bg-secondary"
+                    style="margin-left: 15px;">New Season 2026</span></h4>
         </div>
 
         <form class="row g-3" style="width: 100%;">
@@ -331,7 +364,7 @@
             aria-valuemax="100">
             <div class="progress-bar" style="width:30%; color: black;">30%</div>
         </div><br>
-        
+
         <div class="value-name">
             <h>Booked in USA 45%</h>
         </div>
@@ -339,7 +372,7 @@
             aria-valuemax="100">
             <div class="progress-bar" style="width: 45%; color: black;">45%</div>
         </div><br>
-        
+
         <div class="value-name">
             <h>Booked in Belgium 75%</h>
         </div>
@@ -347,7 +380,7 @@
             aria-valuemax="100">
             <div class="progress-bar" style="width: 75%; color: black;">75%</div>
         </div><br>
-        
+
         <div class="value-name">
             <h>Booked in Brazil 28%</h>
         </div>
@@ -356,40 +389,49 @@
             <div class="progress-bar" style="width: 28%;  color: black;">28%</div>
         </div><br>
 
-        <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); ">
-            <div class="col" style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
+        <div class="row row-cols-1 row-cols-md-2 g-4"
+            style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); ">
+            <div class="col"
+                style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
                 <div class="card" style="font-family: sans-serif; box-shadow: 0px 8px 35px;">
                     <img src="Abu_Dhabi_f1Circuit-map.avif" class="card-img-top" alt="..." style="width: 50%;">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight: 600;">Abu_Dhabi-F1-Circuit-Map</h5>
-                        <p class="card-text">The circuit was designed by Carsten Tilke,Hermann Tilke. The inaugural Saudi Arabian Grand Prix race on the 2021 Formula One season calendar. The weekend before Ramadan. Since 2025, the race is held in April, after Ramadan.</p>
+                        <p class="card-text">The circuit was designed. The weekend before Ramadan. Since 2025, the race
+                            is held in April, after Ramadan.</p>
                     </div>
                 </div>
             </div>
-            <div class="col" style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
+            <div class="col"
+                style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
                 <div class="card" style="font-family: sans-serif; box-shadow: 0px 8px 35px;">
                     <img src="Brazil_Circuit_f1_map.avif" class="card-img-top" alt="..." style="width: 50%;">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight: 600;">Brazil-F1-Circuit-Map</h5>
-                        <p class="card-text">The Autódromo José Carlos Pace, better known as Interlagos, is a 4.309 km (2.677 mi) motorsport circuit located in the city of São Paulo, Brazil. It was inaugurated on 12 May 1940, by the federal intervener of the state of São Paulo.</p>
+                        <p class="card-text">The Autódromo José Carlos Pace, is a 4.309 km (2.677 mi) motorsport circuit
+                            located in the city of São Paulo.</p>
                     </div>
                 </div>
             </div>
-            <div class="col" style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
+            <div class="col"
+                style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
                 <div class="card" style="font-family: sans-serif; box-shadow: 0px 8px 35px;">
                     <img src="Belgium-F1_circuit map.jpg" class="card-img-top" alt="..." style="width: 50%;">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight: 600;">Belgium-F1-Circuit-Map</h5>
-                        <p class="card-text">The Circuit de Spa-Francorchamps , informally referred to as Spa, is a 7.004 km (4.352 mi) motor-racing circuit located in Francorchamps, Stavelot, Wallonia, Belgium, about 8 km Formula One Belgian Grand Prix.</p>
+                        <p class="card-text">The Circuit de , referred to as Spa, is a 7.004 km (4.352 mi) motor-racing
+                            circuit located in Francorchamps, Stavelot.</p>
                     </div>
                 </div>
             </div>
-            <div class="col" style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
+            <div class="col"
+                style="flex: 0 0 auto; width: 100%; height: 345px; justify-content: center; display: flex;">
                 <div class="card" style="font-family: sans-serif; box-shadow: 0px 8px 35px;">
                     <img src="USA_Circuit_f1_-map.avif" class="card-img-top" alt="..." style="width: 50%;">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight: 600;">USA-F1-Circuit-Map</h5>
-                        <p class="card-text">The USA currently has three F1 races in 2026: the United States Grand Prix at the Circuit of the Americas (COTA) in Austin, Texas, the Miami Grand Prix at the Miami International Autodrome. This makes the USA the only country with three rounds on the 2026 F1.</p>
+                        <p class="card-text">The USA currently has three F1 races in 2026: the United States Grand Prix
+                            at the Circuit of the Texas, the Miami Grand Prix.</p>
                     </div>
                 </div>
             </div>
